@@ -11,6 +11,7 @@ interface SummaryCards {
   investmentsTotal: number;
   depositsTotal: number;
   expensesTotal: number;
+  canAddTransaction: boolean;
 }
 
 export async function SummaryCards({
@@ -18,6 +19,7 @@ export async function SummaryCards({
   depositsTotal,
   expensesTotal,
   investmentsTotal,
+  canAddTransaction,
 }: SummaryCards) {
   return (
     <div className="space-y-6">
@@ -26,6 +28,7 @@ export async function SummaryCards({
         title="Saldo"
         amount={balance}
         size="large"
+        userCanAddTransaction={canAddTransaction}
       />
 
       <div className="grid grid-cols-3 gap-6">
