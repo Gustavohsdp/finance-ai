@@ -10,7 +10,9 @@ interface EditTransactionButtonProps {
   transaction: Transaction;
 }
 
-const EditTransactionButton = ({ transaction }: EditTransactionButtonProps) => {
+export function EditTransactionButton({
+  transaction,
+}: EditTransactionButtonProps) {
   const [dialogIsOpen, setDialogIsOpen] = useState(false);
 
   return (
@@ -34,6 +36,4 @@ const EditTransactionButton = ({ transaction }: EditTransactionButtonProps) => {
       />
     </>
   );
-};
-
-export default EditTransactionButton;
+}
